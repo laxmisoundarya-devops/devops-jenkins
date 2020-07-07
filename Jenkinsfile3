@@ -1,0 +1,8 @@
+node{
+  stage('SCM Checkout'){
+    git 'https://github.com/laxmisoundarya-devops/devops-jenkins.git'
+  }
+  stage('Maven Build'){
+    sh 'mvn package'
+  }
+}
