@@ -1,5 +1,5 @@
 node{
-   emailext body: 'pipleline code', subject: 'jenkins job', to: 'lsoundraya7@gmail.com'
+  emailext body: 'pipleline code', subject: 'jenkins job', to: 'lsoundraya7@gmail.com'
   stage('SCM Checkout'){
     git 'https://github.com/laxmisoundarya-devops/devops-jenkins.git'
   }
