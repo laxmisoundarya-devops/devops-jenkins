@@ -5,7 +5,7 @@ node{
   }
   stage('Maven Build'){
    def mvnHome = tool name: 'Maven3', type: 'maven'
-    sh "${mvnHome}/bin/mvn clean package"
+    sh "${mvnHome}/bin/mvn clean pacage"
   }
   }catch(err) {
     emailext body: "${err}", subject: 'failure', to: 'lsoundraya7@gmail.com'
