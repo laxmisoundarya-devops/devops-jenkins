@@ -3,6 +3,7 @@ node{
     git 'https://github.com/laxmisoundarya-devops/devops-jenkins.git'
   }
   stage('Maven Build'){
-    sh 'mvn package'
+   def mvnHome = tool name: 'Maven3', type: 'maven'
+    sh '$(mvnHome)/bin/mvn clean package'
   }
 }
