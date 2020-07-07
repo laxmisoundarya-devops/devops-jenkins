@@ -1,0 +1,10 @@
+node{
+   emailext body: 'pipleline code', subject: 'jenkins job', to: 'lsoundraya7@gmail.com'
+  stage('SCM Checkout'){
+    git 'https://github.com/laxmisoundarya-devops/devops-jenkins.git'
+  }
+  stage('Maven Build'){
+   def mvnHome = tool name: 'Maven3', type: 'maven'
+    sh "${mvnHome}/bin/mvn clean package"
+  }
+ }
