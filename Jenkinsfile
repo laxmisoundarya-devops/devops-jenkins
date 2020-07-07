@@ -3,18 +3,15 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
+                sh 'echo "My first pipeline"'
+                sh '''
+                     echo "more line in one stage"
+                     ls -latr
+                     
+                '''
                 echo 'building the application' 
             }
         }
-        stage('Test') { 
-            steps {
-                echo 'testing the application'
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                echo 'deploying the application'
-            }
-        }
+        
     }
 }
